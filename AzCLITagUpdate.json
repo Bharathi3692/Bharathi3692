@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {},
+  "variables" : {
+      "Name" : "TagUpdateAtSingleSubscription",
+      "location" : "WestEurope"
+      },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deploymentScripts",
+      "apiVersion": "2020-10-01",
+      "name": "[variables('Name')]",
+      "location": "[variables('location')]",
+      "kind": "AzureCLI",
+      "properties": {
+        "azCliVersion": "2.0.80",
+        "timeout": "PT30M",
+        "primaryScriptURI": "https://github.com/Bharathi3692/Bharathi3692/blob/d791c66696a46ed7d24115c01cc4609267aea7dd/TagUpdate.sh",
+        "cleanupPreference": "OnSuccess",
+        "retentionInterval": "P1D"
+      }
+    }
+  ],
+  "outputs": {}
+}
