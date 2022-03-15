@@ -1,3 +1,7 @@
+Tag_Name="Cloud Support Party"
+Tag_Value="TCS GSO Cloud Operations"
+sub="Azure Pass - Sponsorship"
+
 for sub_name in ${sub}
 do
 	az account set --name "$sub_name"
@@ -13,4 +17,3 @@ do
    done
    done
 done
-
